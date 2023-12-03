@@ -16,8 +16,13 @@ pip install -r requirements.txt
 
 Just edit the prompt and run it.
 
+## Scaling models
+Models copied from other repositories on GitHub.
+
+All rights to them are reserved to their respective owners.
+
 ## Note
 
-Please note that only **SDXL-Turbo** can generate images in reasonable time on CPU. 
+Please note that only **SDXL-Turbo** can generate images in reasonable time on CPU (about 4 seconds on 10C/16T CPU). 
 
 The rest of the models demand nVidia GPU (at least 4070) in order to speed up.
