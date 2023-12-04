@@ -9,7 +9,7 @@ You need to be authenticated in Hugging Face in order to use it.
 ```bash
 git clone https://github.com/mikelogaciuk/llm-notebooks.git
 cd llm-notebooks
-virtualenv venv
+virtualenv venv && source venv/bin/activate
 pip install -r requirements.txt
 ```
 
