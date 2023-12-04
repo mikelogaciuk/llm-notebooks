@@ -60,23 +60,26 @@ def scale(scaler,
     """
 
     if not os.path.exists("./temp"):
-        os.mkdir("./temp")
+        os.mkdir("./temp/")
 
-    if not os.path.exists(f"./images/{model}"):
-        os.mkdir(f"./images/{model}")
+    if not os.path.exists("./images"):
+        os.mkdir("./images/")
+
+    if not os.path.exists(f"./images/{model}/"):
+        os.mkdir(f"./images/{model}/")
 
     file_name = generate_random_string()
-    temp_path = f"temp/{file_name}.png"
+    temp_path = f"./temp/{file_name}.png"
 
     target_path = f"images/{model}/{file_name}.png" \
-        if not os.path.exists(f"images/{model}/{file_name}.png") \
-        else f"images/{model}/{file_name}_{generate_random_string()}.png"
+        if not os.path.exists(f"./images/{model}/{file_name}.png") \
+        else f"./images/{model}/{file_name}_{generate_random_string()}.png"
 
     if scaler.lower() not in ["espcn", "fsrcnn", "lapsrn"]:
         raise Exception("Model not available")
 
     scaler = scaler.upper()
-    scaler_path = f"scalers/{scaler}_x{factor}.pb"
+    scaler_path = f"./scalers/{scaler}_x{factor}.pb"
 
     source.save(temp_path)
 
