@@ -9,6 +9,7 @@ You need to be authenticated in Hugging Face in order to use it.
 ```bash
 git clone https://github.com/mikelogaciuk/llm-notebooks.git
 cd llm-notebooks
+virtualenv venv
 pip install -r requirements.txt
 ```
 
@@ -23,6 +24,6 @@ All rights to them are reserved to their respective owners.
 
 ## Note
 
-Please note that only **SDXL-Turbo** can generate images in reasonable time on CPU (about 4 seconds on 10C/16T CPU). 
+Please note that only **SDXL-Turbo** can generate images in reasonable time on CPU (about 4 seconds on 10C/16T CPU).
 
 The rest of the models demand nVidia GPU (at least 4070) in order to speed up.
